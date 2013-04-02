@@ -34,7 +34,7 @@ namespace Datos
             {
                 cmdItems.Connection = connection;
                 cmdItems.CommandType = CommandType.StoredProcedure;//store procedure permite hacer uso del sqlparameters
-                cmdItems.CommandText = "[gezi].[spMaestros]";
+                cmdItems.CommandText = "[gezi].[spMaestro]";
                 SqlParameter paramItems = new SqlParameter("@option", SqlDbType.VarChar, 50);
                 paramItems.Value = op;
                 cmdItems.Parameters.Add(paramItems);
@@ -61,10 +61,6 @@ namespace Datos
 
                 paramItems = new SqlParameter("@carrera", SqlDbType.VarChar, 50);
                 paramItems.Value = eT.Carrera;
-                cmdItems.Parameters.Add(paramItems);
-
-                paramItems = new SqlParameter("@id", SqlDbType.VarChar, 50);
-                paramItems.Value = op;
                 cmdItems.Parameters.Add(paramItems);
                 
                 paramItems = new SqlParameter("@modifyBy", SqlDbType.VarChar, 50);
@@ -120,7 +116,7 @@ namespace Datos
             {
                 cmdItems.Connection = connection;
                 cmdItems.CommandType = CommandType.StoredProcedure;//store procedure permite hacer uso del sqlparameters
-                cmdItems.CommandText = "[gezi].[spMaestros]";
+                cmdItems.CommandText = "[gezi].[spMaestro]";
                 SqlParameter paramItems = new SqlParameter("@option", SqlDbType.VarChar, 50);
                 paramItems.Value = op;
                 cmdItems.Parameters.Add(paramItems);
@@ -131,6 +127,10 @@ namespace Datos
 
                 paramItems = new SqlParameter("@noEmpleado", SqlDbType.VarChar, 50);
                 paramItems.Value = eT.NoEmpleado;
+                cmdItems.Parameters.Add(paramItems);
+
+                paramItems = new SqlParameter("@titulo", SqlDbType.VarChar, 50);
+                paramItems.Value = eT.Titulo;
                 cmdItems.Parameters.Add(paramItems);
 
                 paramItems = new SqlParameter("@nombre", SqlDbType.VarChar, 50);
@@ -147,10 +147,6 @@ namespace Datos
 
                 paramItems = new SqlParameter("@carrera", SqlDbType.VarChar, 50);
                 paramItems.Value = eT.Carrera;
-                cmdItems.Parameters.Add(paramItems);
-
-                paramItems = new SqlParameter("@id", SqlDbType.VarChar, 50);
-                paramItems.Value = op;
                 cmdItems.Parameters.Add(paramItems);
                 
                 paramItems = new SqlParameter("@modifyBy", SqlDbType.VarChar, 50);

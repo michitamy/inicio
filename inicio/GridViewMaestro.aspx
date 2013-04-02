@@ -63,7 +63,8 @@
 </table>
         <br />
 
-<asp:Button ID="btGuardarMaestro" runat="server" Text="Guardar" />
+<asp:Button ID="btGuardarMaestro" runat="server" Text="Guardar" 
+        onclick="btGuardarMaestro_Click" />
         <br />
 <asp:Label ID="lbAlert" runat="server" Text="Label"></asp:Label>
 
@@ -90,12 +91,12 @@
             </asp:TemplateField>
              <asp:TemplateField HeaderText="ApellidoP">
                 <ItemTemplate>
-                    <asp:Label ID="lblApellidoP" runat="server" Text='<%#Eval("Apellido") %>'></asp:Label>
+                    <asp:Label ID="lblApellidoP" runat="server" Text='<%#Eval("ApellidoP") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="ApellidoM">
                 <ItemTemplate>
-                    <asp:Label ID="lblApellidoM" runat="server" Text='<%#Eval("Edad")%>'></asp:Label>
+                    <asp:Label ID="lblApellidoM" runat="server" Text='<%#Eval("ApellidoM")%>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Carrera">

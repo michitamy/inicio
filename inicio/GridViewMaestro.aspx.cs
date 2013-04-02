@@ -40,7 +40,7 @@ namespace inicio
 
             return true;
         }
-        protected void btSave_Click(object sender, EventArgs e)
+        protected void btGuardarMaestro_Click(object sender, EventArgs e)
         {
             objMaestroEntity.NoEmpleado = txtNoEmpleado.Text;
             objMaestroEntity.Titulo = ddTitulo.Text;
@@ -54,7 +54,6 @@ namespace inicio
 
             if (insert > 0)
             {
-
                 lbAlert.Text = "Insercion Correcta";
                 gvMaestroBind();
             }
